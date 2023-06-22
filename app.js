@@ -3,6 +3,7 @@ function currentTime() {
     let hh24 = date.getHours();
     let hh12 = hh24;
     let mm = date.getMinutes();
+    let ss = date.getSeconds();
     let session = "AM";
   
     if(hh12 == 0){
@@ -30,6 +31,14 @@ function currentTime() {
     }
 
     shichenTime();
+    
+    setClockface();
+
+    const mmDegrees = ((mm / 60) * 360) + ((ss/60)*6);
+    minuteHand.style.transform = `translateX(-50%) rotate(${mmDegrees}deg)`;
+
+    const hourDegrees = ((hh24 / 24) * 360) + ((mm/60)*15);
+    hourHand.style.transform = `translateX(-50%) rotate(${hourDegrees}deg)`;
 
     let t = setTimeout(function(){ currentTime() }, 1000);
   }
@@ -54,8 +63,6 @@ function shichenTime() {
     else {
         document.getElementById("shichen").innerText = hanzi; 
     }
-
-    setClockface();
 }
 
 function getShichen () {
