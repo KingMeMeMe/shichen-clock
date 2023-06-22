@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f6eded;
+}
+
+.clock {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+#clockface {
+    position: relative;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.clockface {
+    position: relative;
+    top:0; left:0;
+    justify-content: center;
+    align-items: center;
+}
+
+.clockfaceImage {
+    position: relative;
+    top:0; left:50%;
+    display: flex;
+    max-height: 95vh;
+    max-width: 95vw;
+    transform: translateX(-50%);
+} 
+
+.digitalclock {
+    color: #331616;
+}
+
+#modern {
+    font-family: "EB Garamond", Garamond, serif;
+    font-size: 3.5vmin;
+    position: absolute;
+    font-weight: 500;
+    top: 43%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#shichen {
+    font-family: 'ZCool Xiao Wei';
+    font-size: 3vmin;
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#minuteHand {
+    position: absolute;
+    top:-11%;
+    left:50%;
+    max-width: 155vmin;
+    transform: translateX(-50%);
+}
+
+#hourHand {
+    position: absolute;
+    top:-21%;
+    left:50%;
+    max-width: 155vmin;
+    transform: translateX(-50%);
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url("Fonts/EBGaramond-Regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url("Fonts/EBGaramond-Italic.ttf") format('truetype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url("Fonts/EBGaramond-Medium.ttf") format('truetype');
+    font-style: normal;
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url("Fonts/EBGaramond-MediumItalic.ttf") format('truetype');
+    font-style: italic;
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url("Fonts/EBGaramond-SemiBold.ttf") format('truetype');
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url("Fonts/EBGaramond-SemiBoldItalic.ttf") format('truetype');
+    font-style: italic;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'ZCool Xiao Wei';
+    src: url("Fonts/ZCOOLXiaoWei-Regular.ttf");
+}
