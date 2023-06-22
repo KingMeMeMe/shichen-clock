@@ -1,3 +1,12 @@
+window.onload = function() {
+    if (localStorage.getItem('modernPref') == null) {
+        localStorage.setItem('modernPref', '24');
+    }
+    if (localStorage.getItem('shichenPref') == null) {
+        localStorage.setItem('shichenPref','hanzi')
+    }
+}
+
 function currentTime() {
     let date = new Date(); 
     let hh24 = date.getHours();
@@ -23,11 +32,9 @@ function currentTime() {
 
     if(localStorage.getItem('modernPref') == '12') {
         document.getElementById("modern").innerText = time12; 
-        console.log(time12);
     }
     else {
         document.getElementById("modern").innerText = time24; 
-        console.log(time24);
     }
 
     shichenTime();
@@ -54,7 +61,7 @@ function shichenTime() {
     let kk = getKe();
 
     let hanzi =  hh[0] + cz[0] + kk[0];
-    let pinyin = hh[1] + cz[1] + kk[1];
+    let pinyin = hh[1] + cz[1] + ' ' + kk[1];
 
 
     if(localStorage.getItem('shichenPref') == 'pinyin') {
@@ -234,5 +241,6 @@ function setClockface () {
     else {
         document.getElementById('shichenImage').src = 'Static/Images/shichen-clock0024.png';}
 }
+
 
   currentTime();
